@@ -1,0 +1,125 @@
+[
+  {
+    "name": "kitchen",
+    "lighting": [
+      "main",
+      "counter led 1",
+      "counter led 2"
+    ],
+    "devices": [
+      "dishwasher",
+      "fridge",
+      "cooker"
+    ]
+  },
+  {
+    "name": "bathroom",
+    "lighting": [
+      "main",
+      "mirror led"
+    ],
+    "devices": [
+      "washing machine",
+      "dryer"
+    ]
+  },
+  {
+    "name": "dining room",
+    "lighting": [
+      "main",
+      "wet bar led"
+    ],
+    "devices": [
+      "squeezer"
+    ]
+  },
+  {
+    "name": "porch",
+    "lighting": [
+      "main"
+    ],
+    "devices": [
+    ]
+  },
+  {
+    "name": "corridor",
+    "lighting": [
+      "main",
+      "stairs led",
+      "mirror led"
+    ],
+    "devices": [
+    ]
+  },
+  {
+    "name": "pantry",
+    "lighting": [
+      "main"
+    ],
+    "devices": [
+      "fridge",
+      "air conditioning"
+    ]
+  },
+  {
+    "name": "utility room",
+    "lighting": [
+      "main"
+    ],
+    "devices": [
+      "boiler"
+    ]
+  },
+  {
+    "name": "living room",
+    "lighting": [
+      "main",
+      "tv led",
+      "sofa led"
+    ],
+    "devices": [
+      "tv",
+      "dvd player",
+      "stereo speakers",
+      "pc",
+      "printer"
+    ]
+  },
+  {
+    "name": "bedroom",
+    "lighting": [
+      "main",
+      "bed led",
+      "wardrobe led"
+    ],
+    "devices": [
+      "iron",
+      "tv"
+    ]
+  },
+  {
+    "name": "garage",
+    "lighting": [
+      "main"
+    ],
+    "devices": [
+      "garage door"
+    ]
+  },
+  {
+    "name": "outdoor",
+    "lighting": [
+      "main",
+      "garden led light 1",
+      "garden led light 2",
+      "garden led light 3",
+      "garden led light 4"
+    ],
+    "devices": [
+      "water sprinkler 1",
+      "water sprinkler 2",
+      "water sprinkler 3",
+      "water sprinkler 4"
+    ]
+  }
+]

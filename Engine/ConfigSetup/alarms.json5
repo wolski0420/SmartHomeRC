@@ -1,0 +1,14 @@
+[
+  {
+    "name": "alarm",
+    "location": "home"
+  },
+  {
+    "name": "alarm from monitoring",
+    "location": "outside"
+  },
+  {
+    "name": "alarm",
+    "location": "garage"
+  }
+]

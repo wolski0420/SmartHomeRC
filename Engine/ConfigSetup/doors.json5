@@ -1,0 +1,52 @@
+[
+  {
+    "room1": "kitchen",
+    "room2": "dining room",
+    "typ": "interior"
+  },
+  {
+    "room1": "dining room",
+    "room2": "corridor",
+    "typ": "interior"
+  },
+  {
+    "room1": "corridor",
+    "room2": "porch",
+    "typ": "interior"
+  },
+  {
+    "room1": "porch",
+    "room2": "bathroom",
+    "typ": "interior"
+  },
+  {
+    "room1": "corridor",
+    "room2": "pantry",
+    "typ": "interior"
+  },
+  {
+    "room1": "pantry",
+    "room2": "utility room",
+    "typ": "interior"
+  },
+  {
+    "room1": "corridor",
+    "room2": "living room",
+    "typ": "interior"
+  },
+  {
+    "room1": "living room",
+    "room2": "bedroom",
+    "typ": "interior"
+  },
+  {
+    "room1": "porch",
+    "room2": "outdoor",
+    "typ": "exterior"
+  },
+  {
+    "room1": "utility room",
+    "room2": "outdoor",
+    "typ": "exterior"
+  }
+]

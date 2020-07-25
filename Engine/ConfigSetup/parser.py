@@ -1,0 +1,63 @@
+import json
+from Engine.HomeObjects.device import *
+from Engine.HomeObjects.room import *
+from Engine.HomeObjects.light import *
+from Engine.HomeObjects.door import *
+from Engine.HomeObjects.alarm import *
+
+
+ROOMS_CONFIG_PATH = 'Engine/ConfigSetup/rooms.json5'
+DOORS_CONFIG_PATH = 'Engine/ConfigSetup/doors.json5'
+ALARMS_CONFIG_PATH = 'Engine/ConfigSetup/alarms.json5'
+
+
+def setup_alarms():
+    rc_config = json.load(open(ALARMS_CONFIG_PATH))
+    alarms = dict()
+
+    for alarm in rc_config:
+        alarms[str(alarm['location'] + '-' + alarm['name'])] = Alarm(
+            alarm['name'], alarm['location']
+        )
+
+    return alarms
+
+
+def setup_doors(rooms):
+    rc_config = json.load(open(DOORS_CONFIG_PATH))
+    doors = dict()
+
+    for door in rc_config:
+        doors[str(door['room1'] + '-' + door['room2'])] = Door(
+            rooms[door['room1']], rooms[door['room2']], door['typ']
+        )
+
+    return doors
+
+
+def setup_lighting(room):
+    lights = dict()
+
+    for light in room['lighting']:
+        lights[light] = Light(light, str(room['name'] + '/light/' + light))
+
+    return lights
+
+
+def setup_devices(room):
+    devices = dict()
+
+    for device in room['devices']:
+        devices[device] = Device(device, str(room['name'] + '/device/' + device))
+
+    return devices
+
+
+def setup_rooms():
+    rc_config = json.load(open(ROOMS_CONFIG_PATH))
+    rooms = dict()
+
+    for room in rc_config:
+        rooms[room['name']] = Room(room['name'], setup_lighting(room), setup_devices(room))
+
+    return rooms
