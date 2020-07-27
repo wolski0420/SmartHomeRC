@@ -14,9 +14,3 @@ class Info(Observable):
     def change_port(self, port):
         self.port = port
         self.notify_observers()
-
-    def get_ip(self):
-        return self.ip
-
-    def get_port(self):
-        return self.port

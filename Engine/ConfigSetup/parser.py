@@ -39,7 +39,7 @@ def setup_lighting(room):
     lights = dict()
 
     for light in room['lighting']:
-        lights[light] = Light(light, str(room['name'] + '/light/' + light))
+        lights[light] = Light(light, str('room/' + room['name'] + '/light/' + light))
 
     return lights
 
@@ -48,7 +48,7 @@ def setup_devices(room):
     devices = dict()
 
     for device in room['devices']:
-        devices[device] = Device(device, str(room['name'] + '/device/' + device))
+        devices[device] = Device(device, str('room/' + room['name'] + '/device/' + device))
 
     return devices
 

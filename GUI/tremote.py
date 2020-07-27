@@ -1,7 +1,6 @@
 from GUI.HomeObjects.troom import *
 from GUI.HomeObjects.tdoor import *
 from GUI.HomeObjects.talarm import *
-from tkinter import *
 from tkinter import ttk
 from GUI.tutils import *
 from GUI.tinfo import *
@@ -72,14 +71,17 @@ class TRemote:
         self.t_common_frame.pack(expand=True, fill='both', side=LEFT, padx=1)
         self.t_alarms_frame.pack(expand=True, fill='both', padx=8)
         self.t_doors_frame.pack(expand=True, fill='both', padx=8)
-        self.t_info_frame.pack(expand=True, fill='both', padx=8, side=TOP)
-        self.t_utils_frame.pack(expand=True, fill='both', padx=8, side=TOP)
+        self.t_info_frame.pack(expand=True, fill='both', padx=8)
+        self.t_utils_frame.pack(expand=True, fill='both', padx=8)
 
     def __run__(self):
         self.window.update()
         self.window.deiconify()
         self.remote_control.run()
-        self.window.mainloop()
+        try:
+            self.window.mainloop()
+        except:
+            self.window.mainloop()
 
     def start(self):
         self.window.withdraw()

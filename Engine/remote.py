@@ -13,33 +13,42 @@ class RemoteControl:
         self.alarms = parser.setup_alarms()
         self.utils = Utils(self.send, self.rooms, self.alarms, self.doors)
         self.info = Info('127.0.0.1', 1883)
-        self.client = mqtt.Client()
+        self.subscriber = mqtt.Client()
+        self.publisher = mqtt.Client()
 
     def __subscribe_all__(self):
         for room in self.rooms.values():
             for light in room.lighting.values():
-                self.client.subscribe(light.location)
+                self.subscriber.subscribe(light.location)
             for device in room.devices.values():
-                self.client.subscribe(device.location)
+                self.subscriber.subscribe(device.location)
 
         for door in self.doors.values():
-            self.client.subscribe(str('door/' + door.room1.name + '-' + door.room2.name))
+            self.subscriber.subscribe(str('door/' + door.room1.name + '-' + door.room2.name))
 
         for alarm in self.alarms.values():
-            self.client.subscribe(str('alarm/' + alarm.location + '-' + alarm.name))
+            self.subscriber.subscribe(str('alarm/' + alarm.location + '-' + alarm.name))
 
     def __setup_client__(self):
-        Behaviours(self.client, self.rooms, self.doors, self.alarms).set_all()
+        Behaviours(self.subscriber, self.rooms, self.doors, self.alarms).set_all()
+
+    def __setup__(self):
+        self.__setup_client__()
+        self.__subscribe_all__()
 
     def run(self):
-        self.client.connect(self.info.get_ip(), self.info.get_port())
-        self.client.loop_start()
+        self.subscriber.connect(self.info.ip, self.info.port)
+        self.subscriber.loop_start()
+        self.publisher.connect(self.info.ip, self.info.port)
+        self.publisher.loop_start()
         self.__setup_client__()
         self.__subscribe_all__()
 
     def send(self, topic, message):
-        self.client.publish(topic, message)
+        self.publisher.publish(topic, message)
 
     def finish(self):
-        self.client.loop_stop()
-        self.client.disconnect()
+        self.subscriber.loop_stop()
+        self.subscriber.disconnect()
+        self.publisher.loop_stop()
+        self.publisher.disconnect()

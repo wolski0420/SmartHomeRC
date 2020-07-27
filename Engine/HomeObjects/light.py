@@ -11,8 +11,5 @@ class Light(Object):
         if 0 <= signal <= 100:
             self.brightness = signal
             print(f'Changed brightness of \"{self.location}\" '
-                  f'to \"{self.get_brightness()}\"!!!')
+                  f'to \"{self.brightness}\"!!!')
             self.notify_observers('brightness')
-
-    def get_brightness(self):
-        return self.brightness

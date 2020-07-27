@@ -10,9 +10,10 @@ class Door(Observable):
         self.blockade = blockade
 
     def change_blockade(self, signal):
-        if signal.lower() == 'block':
+        signal = signal.lower()
+        if signal == 'block':
             self.blockade = True
-        else:
+        elif signal == 'unblock':
             self.blockade = False
 
         print(f'Changed blockade status in door \"{self.room1.name}-{self.room2.name}\" '

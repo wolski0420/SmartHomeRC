@@ -6,9 +6,10 @@ class Alarm(Object):
         Object.__init__(self, name, location, power)
 
     def change_power(self, signal):
-        if signal.lower() == 'on':
+        signal = signal.lower()
+        if signal == 'on':
             self.power = True
-        else:
+        elif signal == 'off':
             self.power = False
 
         print(f'Changed power status of \"{self.name}\" '
