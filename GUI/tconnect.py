@@ -39,5 +39,4 @@ class TConnectWindow(Tk):
         if port != '':
             self.__info.change_port(int(port))
 
-        self.destroy()
         self.__run_rc()

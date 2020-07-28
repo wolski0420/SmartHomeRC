@@ -38,6 +38,7 @@ class TRemote:
 
     def __setup_window__(self):
         self.window.title(str('Remote Control ' + self.remote_control.name))
+        self.window.protocol("WM_DELETE_WINDOW", self.finish)
 
     def __setup_rooms__(self):
         self.t_rooms_label.pack(pady=10)
@@ -75,17 +76,16 @@ class TRemote:
         self.t_utils_frame.pack(expand=True, fill='both', padx=8)
 
     def __run__(self):
+        self.connect_window.destroy()
+        self.remote_control.run()
         self.window.update()
         self.window.deiconify()
-        self.remote_control.run()
-        try:
-            self.window.mainloop()
-        except:
-            self.window.mainloop()
+        self.window.mainloop()
 
     def start(self):
         self.window.withdraw()
         self.connect_window.mainloop()
 
     def finish(self):
+        self.window.destroy()
         self.remote_control.finish()
