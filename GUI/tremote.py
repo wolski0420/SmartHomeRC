@@ -11,7 +11,7 @@ class TRemote:
     def __init__(self, remote):
         self.remote_control = remote
         self.window = Tk()
-        self.connect_window = TConnectWindow(self.remote_control.info, self.__run__)
+        self.connect_window = TConnectWindow(self.remote_control.info, self.__run__, self.__finish__)
         self.t_rooms = []
         self.t_rooms_frame = Frame(self.window, highlightbackground='black', highlightthickness=0.5)
         self.t_rooms_label = Label(self.t_rooms_frame, text='Rooms', font='Ubuntu 20 bold')
@@ -38,7 +38,7 @@ class TRemote:
 
     def __setup_window__(self):
         self.window.title(str('Remote Control ' + self.remote_control.name))
-        self.window.protocol("WM_DELETE_WINDOW", self.finish)
+        self.window.protocol("WM_DELETE_WINDOW", self.__finish__)
 
     def __setup_rooms__(self):
         self.t_rooms_label.pack(pady=10)
@@ -86,6 +86,6 @@ class TRemote:
         self.window.withdraw()
         self.connect_window.mainloop()
 
-    def finish(self):
+    def __finish__(self):
         self.window.destroy()
         self.remote_control.finish()
