@@ -39,7 +39,8 @@ def setup_lighting(room):
     lights = dict()
 
     for light in room['lighting']:
-        lights[light] = Light(light, str('room/' + room['name'] + '/light/' + light))
+        lights[light['name']] = Light(light['name'], str('room/' + room['name'] + '/light/' + light['name']),
+                                      colors=light['colors'])
 
     return lights
 

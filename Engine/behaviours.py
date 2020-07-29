@@ -37,6 +37,8 @@ class Behaviours:
                     light.change_power(message[1])
                 elif message[0] == 'brightness':
                     light.change_brightness(message[1])
+                elif message[0] == 'color':
+                    light.change_color(message[1])
 
             elif topic[2] == 'device':
                 device = room.devices[topic[3]]

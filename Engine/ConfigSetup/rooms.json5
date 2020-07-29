@@ -2,9 +2,26 @@
   {
     "name": "kitchen",
     "lighting": [
-      "main",
-      "counter led 1",
-      "counter led 2"
+      {
+        "name": "main",
+        "colors": []
+      },
+      {
+        "name": "counter led 1",
+        "colors": [
+          "red",
+          "green",
+          "blue"
+        ]
+      },
+      {
+        "name": "counter led 2",
+        "colors": [
+          "red",
+          "green",
+          "blue"
+        ]
+      }
     ],
     "devices": [
       "dishwasher",
@@ -15,8 +32,17 @@
   {
     "name": "bathroom",
     "lighting": [
-      "main",
-      "mirror led"
+      {
+        "name": "main",
+        "colors": []
+      },
+      {
+        "name": "mirror led",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      }
     ],
     "devices": [
       "washing machine",
@@ -26,8 +52,17 @@
   {
     "name": "dining room",
     "lighting": [
-      "main",
-      "wet bar led"
+      {
+        "name": "main",
+        "colors": []
+      },
+      {
+        "name": "wet bar led",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      }
     ],
     "devices": [
       "squeezer"
@@ -36,7 +71,10 @@
   {
     "name": "porch",
     "lighting": [
-      "main"
+      {
+        "name": "main",
+        "colors": []
+      }
     ],
     "devices": [
     ]
@@ -44,9 +82,24 @@
   {
     "name": "corridor",
     "lighting": [
-      "main",
-      "stairs led",
-      "mirror led"
+      {
+        "name": "main",
+        "colors": []
+      },
+      {
+        "name": "stairs led",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      },
+      {
+        "name": "mirror led",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      }
     ],
     "devices": [
     ]
@@ -54,7 +107,10 @@
   {
     "name": "pantry",
     "lighting": [
-      "main"
+      {
+        "name": "main",
+        "colors": []
+      }
     ],
     "devices": [
       "fridge",
@@ -64,7 +120,10 @@
   {
     "name": "utility room",
     "lighting": [
-      "main"
+      {
+        "name": "main",
+        "colors": []
+      }
     ],
     "devices": [
       "boiler"
@@ -73,9 +132,26 @@
   {
     "name": "living room",
     "lighting": [
-      "main",
-      "tv led",
-      "sofa led"
+      {
+        "name": "main",
+        "colors": []
+      },
+      {
+        "name": "tv led",
+        "colors": [
+          "red",
+          "green",
+          "blue"
+        ]
+      },
+      {
+        "name": "sofa led",
+        "colors": [
+          "red",
+          "green",
+          "blue"
+        ]
+      }
     ],
     "devices": [
       "tv",
@@ -88,9 +164,25 @@
   {
     "name": "bedroom",
     "lighting": [
-      "main",
-      "bed led",
-      "wardrobe led"
+      {
+        "name": "main",
+        "colors": []
+      },
+      {
+        "name": "bed led",
+        "colors": [
+          "red",
+          "green",
+          "blue"
+        ]
+      },
+      {
+        "name": "wardrobe led",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      }
     ],
     "devices": [
       "iron",
@@ -100,7 +192,10 @@
   {
     "name": "garage",
     "lighting": [
-      "main"
+      {
+        "name": "main",
+        "colors": []
+      }
     ],
     "devices": [
       "garage door"
@@ -109,11 +204,38 @@
   {
     "name": "outdoor",
     "lighting": [
-      "main",
-      "garden led light 1",
-      "garden led light 2",
-      "garden led light 3",
-      "garden led light 4"
+      {
+        "name": "main",
+        "colors": []
+      },
+      {
+        "name": "garden light 1",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      },
+      {
+        "name": "garden light 2",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      },
+      {
+        "name": "garden light 3",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      },
+      {
+        "name": "garden light 4",
+        "colors": [
+          "warm white",
+          "cool white"
+        ]
+      }
     ],
     "devices": [
       "water sprinkler 1",
