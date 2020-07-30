@@ -14,6 +14,7 @@ class TInfo(Frame, Observer):
         self.__port_frame = Frame(self)
         self.__port_property_label = Label(self.__port_frame, text='Port: ')
         self.__port_value_label = Label(self.__port_frame, text=self.__info.port, background='orange')
+        self.__description_label = Label(self, text=self.__info.description, wraplength=200)
         self.__setup_all__()
 
     def __setup_all__(self):
@@ -24,6 +25,7 @@ class TInfo(Frame, Observer):
         self.__port_frame.pack(pady=6)
         self.__port_property_label.pack(side=LEFT, padx=3)
         self.__port_value_label.pack(side=LEFT, padx=3)
+        self.__description_label.pack(pady=6)
 
     def notify(self, information=None):
         self.__ip_value_label.configure(text=self.__info.ip)

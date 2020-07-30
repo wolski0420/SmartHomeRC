@@ -70,10 +70,10 @@ class TRemote:
         self.t_others_frame.pack(expand=True, fill='both', side=LEFT, padx=1)
         self.t_rooms_frame.pack(expand=True, fill='both', side=LEFT, padx=1)
         self.t_common_frame.pack(expand=True, fill='both', side=LEFT, padx=1)
-        self.t_alarms_frame.pack(expand=True, fill='both', padx=8)
-        self.t_doors_frame.pack(expand=True, fill='both', padx=8)
-        self.t_info_frame.pack(expand=True, fill='both', padx=8)
-        self.t_utils_frame.pack(expand=True, fill='both', padx=8)
+        self.t_alarms_frame.pack(fill='both', padx=8)
+        self.t_doors_frame.pack(fill='both', padx=8)
+        self.t_info_frame.pack(fill='both', padx=8)
+        self.t_utils_frame.pack(fill='both', padx=8)
 
     def __run__(self):
         self.connect_window.destroy()
