@@ -5,4 +5,6 @@ To start this app, you need to have python and mosquitto (MQTT) installed. After
 in console from main directory. It will show connection window where you need to enter server ip address and port. 
 Then you will be able to see a bit bigger window where you can send specific commands to the server. More information in the documentation...
 
+Screenshot from the app (below):
+
 <img alt="Screen" src="screen.png">
