@@ -13,3 +13,5 @@ Then you will be able to see a bit bigger window where you can send specific com
 Screenshot from the app (below):
 
 <img alt="Screen" src="screen.png">
+
+P.S. this application set 50 brightness and red color for any light by default, you can change it by sending a request to get these values from the server.

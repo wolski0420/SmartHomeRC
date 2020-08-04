@@ -9,3 +9,5 @@ Jest to aplikacja służąca jako pilot inteligentnego domu. Umożliwia połącz
 Screenshot from the app (below):
 
 <img alt="Screen" src="screen.png">
+
+P.S. aplikacja domyślnie przypisuje jasność na 50 i kolor czerwony dla światła, można to jednak zmienić poprzez wysyłanie żądania otrzymania tych informacji od serwera.
