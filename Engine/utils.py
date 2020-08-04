@@ -1,3 +1,6 @@
+import random
+
+
 class Utils:
     def __init__(self, send_func, rooms, alarms, doors):
         self.__send_func = send_func
@@ -48,3 +51,14 @@ class Utils:
         for alarm in self.__alarms.values():
             if alarm.get_power_status() == 'On':
                 self.__send_func(str('alarm/' + alarm.location + '-' + alarm.name), 'power=off')
+
+    def safe_mode(self):
+        self.turn_off_the_devices()
+        self.turn_off_the_lights()
+        self.turn_on_the_alarms()
+        self.block_all_doors()
+
+        random_room_name = random.choice(list(self.__rooms))
+        random_light_name = random.choice(list(self.__rooms[random_room_name].lighting))
+        random_light = self.__rooms[random_room_name].lighting[random_light_name]
+        self.__send_func(random_light.location, 'power=on')

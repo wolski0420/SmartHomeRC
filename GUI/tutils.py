@@ -6,6 +6,7 @@ class TUtils(Frame):
         Frame.__init__(self, master=master)
         self.__utils = utils
         self.__utils_label = Label(self, text='Utils', font='Ubuntu 20 bold')
+        self.__safe_mode_btn = Button(self, text="Safe mode", command=utils.safe_mode, bg='orange')
         self.__off_lights_btn = Button(self, text='Turn OFF all lights', command=utils.turn_off_the_lights, bg='red')
         self.__on_lights_btn = Button(self, text='Turn ON all lights', command=utils.turn_on_the_lights, bg='green')
         self.__off_devices_btn = Button(self, text='Turn OFF all devices', command=utils.turn_off_the_devices, bg='red')
@@ -18,6 +19,7 @@ class TUtils(Frame):
 
     def __setup_all__(self):
         self.__utils_label.pack(pady=10)
+        self.__safe_mode_btn.pack(pady=6)
         self.__off_lights_btn.pack(pady=6)
         self.__on_lights_btn.pack(pady=6)
         self.__off_devices_btn.pack(pady=6)
